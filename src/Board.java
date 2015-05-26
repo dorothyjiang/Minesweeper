@@ -107,8 +107,7 @@ public class Board extends JPanel {
      * nearby mines.
      */
     private int countMinesAround(int x, int y) {
-        int count = 0;
-        
+        int count = 0;        
         /* YOUR CODE GOES HERE! */ 
         
         /* check cells at
@@ -121,6 +120,31 @@ public class Board extends JPanel {
          * x, y-1
          * x-1, y-1
          */
+        
+        if (checkEmpty(cells[x-1][y])) {
+        	count++;
+        }
+        if (checkEmpty(cells[x-1][y+1])) {
+        	count++;
+        }
+        if (checkEmpty(cells[x][y+1])) {
+        	count++;
+        }
+        if (checkEmpty(cells[x+1][y+1])) {
+        	count++;
+        }
+        if (checkEmpty(cells[x+1][y])) {
+        	count++;
+        }
+        if (checkEmpty(cells[x+1][y-1])) {
+        	count++;
+        }
+        if (checkEmpty(cells[x][y-1])) {
+        	count++;
+        }
+        if (checkEmpty(cells[x-1][y-1])) {
+        	count++;
+        }
 
         return count;
     }
