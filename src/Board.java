@@ -110,6 +110,17 @@ public class Board extends JPanel {
         int count = 0;
         
         /* YOUR CODE GOES HERE! */ 
+        
+        /* check cells at
+         * x-1, y
+         * x-1, y+1
+         * x, y+1
+         * x+1, y+1
+         * x+1, y
+         * x+1, y-1
+         * x, y-1
+         * x-1, y-1
+         */
 
         return count;
     }
